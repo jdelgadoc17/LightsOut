@@ -1,5 +1,6 @@
 package com.example.projectlightsout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -27,14 +28,20 @@ public class MainActivity extends AppCompatActivity {
 
 
         //SPINNER
-        String[] spinner_values ={"", "2", "3"};
-        ArrayAdapter<String> adaptador = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, spinner_values);
+        String[] spinner_valores ={"", "2", "3"};
+        ArrayAdapter<String> adaptador = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, spinner_valores);
         binding.MainSpinner.setAdapter(adaptador);
 
         binding.MainSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(MainActivity.this, "Opción elegida", Toast.LENGTH_SHORT).show();
+
+                if(adapterView.getAdapter().getItem(i)!=""){
+                    Toast.makeText(MainActivity.this, "Opción elegida", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, DosBombillas.class);
+                    startActivity(intent);
+
+                }
             }
 
             @Override

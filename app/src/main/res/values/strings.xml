@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">ProjectLightsOut</string>
-    <string name="main_title">Lights Out</string>
+    <string name="main_titulo">Lights Out</string>
+    <string name="main_contador">Nº de dispositivos</string>
+    <string name="dos_bombillas_titulo">Panel de Control</string>
+    <string name="bloquear">Bloquear</string>
+
+
+
 
 </resources>
