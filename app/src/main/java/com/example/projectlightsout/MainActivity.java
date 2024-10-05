@@ -37,9 +37,19 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
                 if(adapterView.getAdapter().getItem(i)!=""){
-                    Toast.makeText(MainActivity.this, "Opción elegida", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(MainActivity.this, DosBombillas.class);
-                    startActivity(intent);
+                    if(adapterView.getAdapter().getItem(i)==spinner_valores[1]){
+                        //PASAMOS A ACTIVITY 2 BOMBILLAS
+                        Toast.makeText(MainActivity.this, "2 bombillas elegidas", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(MainActivity.this, DosBombillas.class);
+                        startActivity(intent);
+                    }else{
+                        //PASAMOS A ACTIVITY 3 BOMBILLAS
+
+                        Toast.makeText(MainActivity.this, "3 bombillas elegidas", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(MainActivity.this, TresBombillas.class);
+                        startActivity(intent);
+                    }
+
 
                 }
             }

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DosBombillas">
+
+    <TextView
+        android:id="@+id/TresBombillasTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dos_bombillas_titulo"
+        android:textSize="50sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center" />
+
+    <ImageView
+        android:id="@+id/TresBombImg1"
+        android:layout_width="123dp"
+        android:layout_height="180dp"
+        app:layout_constraintTop_toBottomOf="@id/TresBombillasTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/TresBombImg2"
+        android:paddingBottom="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/TresBombImg2"
+        android:layout_width="123dp"
+        android:layout_height="180dp"
+        app:layout_constraintTop_toBottomOf="@id/TresBombillasTitulo"
+        app:layout_constraintStart_toEndOf="@id/TresBombImg1"
+        app:layout_constraintEnd_toStartOf="@id/TresBombImg3"
+        android:paddingBottom="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/TresBombImg3"
+        android:layout_width="123dp"
+        android:layout_height="180dp"
+        app:layout_constraintTop_toBottomOf="@id/TresBombillasTitulo"
+        app:layout_constraintStart_toEndOf="@id/TresBombImg2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingBottom="20dp"
+        />
+
+    <ToggleButton
+        android:id="@+id/TresBombBot1"
+        android:layout_width="117dp"
+        android:layout_height="72dp"
+        android:text="Toggle 1"
+        app:layout_constraintTop_toBottomOf="@id/TresBombImg1"
+        app:layout_constraintStart_toStartOf="@id/TresBombImg1"
+        app:layout_constraintEnd_toEndOf="@id/TresBombImg1" />
+
+    <ToggleButton
+        android:id="@+id/TresBombBot2"
+        android:layout_width="117dp"
+        android:layout_height="72dp"
+        android:text="Toggle 2"
+        app:layout_constraintTop_toBottomOf="@id/TresBombImg2"
+        app:layout_constraintStart_toStartOf="@id/TresBombImg2"
+        app:layout_constraintEnd_toEndOf="@id/TresBombImg2" />
+
+    <!-- ToggleButton 3 -->
+    <ToggleButton
+        android:id="@+id/TresBombBot3"
+        android:layout_width="117dp"
+        android:layout_height="72dp"
+        android:text="Toggle 3"
+        app:layout_constraintTop_toBottomOf="@id/TresBombImg3"
+        app:layout_constraintStart_toStartOf="@id/TresBombImg3"
+        app:layout_constraintEnd_toEndOf="@id/TresBombImg3" />
+
+    <CheckBox
+        android:id="@+id/TresBombBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/TresBombBot1"
+        app:layout_constraintStart_toStartOf="@id/TresBombBot1"
+        app:layout_constraintEnd_toEndOf="@id/TresBombBot1" />
+
+    <CheckBox
+        android:id="@+id/TresBombBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/TresBombBot2"
+        app:layout_constraintStart_toStartOf="@id/TresBombBot2"
+        app:layout_constraintEnd_toEndOf="@id/TresBombBot2" />
+
+    <CheckBox
+        android:id="@+id/TresBombBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/TresBombBot3"
+        app:layout_constraintStart_toStartOf="@id/TresBombBot3"
+        app:layout_constraintEnd_toEndOf="@id/TresBombBot3" />
+
+
+    <Switch
+        android:id="@+id/TresBombSwitch"
+        android:layout_width="107dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/bloquear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/TresBombChange"
+        android:layout_width="95dp"
+        android:layout_height="83dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TresBombBot1"
+        app:srcCompat="@drawable/baseline_cached_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
