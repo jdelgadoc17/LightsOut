@@ -95,14 +95,14 @@
 
     <Switch
         android:id="@+id/DosBombSwitch"
-        android:layout_width="107dp"
-        android:layout_height="35dp"
+        android:layout_width="118dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="16dp"
+        android:text="@string/bloquear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.917"
-        app:layout_constraintStart_toStartOf="parent"
-        android:text="@string/bloquear"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/DosBombChange"

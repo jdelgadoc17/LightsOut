@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+<string name="app_name">ProjectLightsOut</string>
+<string name="main_titulo">Lights Out</string>
+<string name="main_contador">Number of Devices</string>
+<string name="dos_bombillas_titulo">Control Panel</string>
+<string name="bloquear">Lock</string>
+<string name="eleccion_3">3 bulbs selected</string>
+<string name="eleccion_2">2 bulbs selected</string>
+</resources>

@@ -39,13 +39,13 @@ public class MainActivity extends AppCompatActivity {
                 if(adapterView.getAdapter().getItem(i)!=""){
                     if(adapterView.getAdapter().getItem(i)==spinner_valores[1]){
                         //PASAMOS A ACTIVITY 2 BOMBILLAS
-                        Toast.makeText(MainActivity.this, "2 bombillas elegidas", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, getString(R.string.eleccion_2), Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(MainActivity.this, DosBombillas.class);
                         startActivity(intent);
-                    }else{
+                    }else if(adapterView.getAdapter().getItem(i)==spinner_valores[2]){
                         //PASAMOS A ACTIVITY 3 BOMBILLAS
 
-                        Toast.makeText(MainActivity.this, "3 bombillas elegidas", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, getString(R.string.eleccion_3), Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(MainActivity.this, TresBombillas.class);
                         startActivity(intent);
                     }
