@@ -16,6 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.projectlightsout.databinding.ActivityDosBombillasBinding;
 
+
 public class DosBombillas extends AppCompatActivity {
     ActivityDosBombillasBinding binding;
 
@@ -42,31 +43,30 @@ public class DosBombillas extends AppCompatActivity {
         binding.DosBombImg1.setImageDrawable(bomb_off);
         binding.DosBombImg2.setImageDrawable(bomb_off);
 
-        //TOGGLE 1
-        binding.DosBombBot1.setOnClickListener(new View.OnClickListener() {
+        // TOGGLE 1
+        binding.DosBombBot1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
-                if (isBomb1On) {
-                    binding.DosBombImg1.setImageDrawable(bomb_off);
-                    isBomb1On = false;
-                } else {
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if (isChecked) {
                     binding.DosBombImg1.setImageDrawable(bomb_on);
                     isBomb1On = true;
+                } else {
+                    binding.DosBombImg1.setImageDrawable(bomb_off);
+                    isBomb1On = false;
                 }
             }
         });
 
-
-        //TOGGLE 2
-        binding.DosBombBot2.setOnClickListener(new View.OnClickListener() {
+// TOGGLE 2
+        binding.DosBombBot2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
-                if (isBomb2On) {
-                    binding.DosBombImg2.setImageDrawable(bomb_off);
-                    isBomb2On = false;
-                } else {
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if (isChecked) {
                     binding.DosBombImg2.setImageDrawable(bomb_on);
                     isBomb2On = true;
+                } else {
+                    binding.DosBombImg2.setImageDrawable(bomb_off);
+                    isBomb2On = false;
                 }
             }
         });

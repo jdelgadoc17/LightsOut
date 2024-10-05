@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         //SPINNER
         String[] spinner_valores ={"", "2", "3"};
-        ArrayAdapter<String> adaptador = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, spinner_valores);
+        ArrayAdapter<String> adaptador = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, spinner_valores);
         binding.MainSpinner.setAdapter(adaptador);
 
         binding.MainSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

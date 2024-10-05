@@ -13,10 +13,10 @@
         android:theme="@style/Theme.ProjectLightsOut"
         tools:targetApi="31">
         <activity
-            android:name=".TresBombillas"
+            android:name=".DosBombillas"
             android:exported="false" />
         <activity
-            android:name=".DosBombillas"
+            android:name=".TresBombillas"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
