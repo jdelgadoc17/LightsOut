@@ -50,31 +50,28 @@
 
     <ToggleButton
         android:id="@+id/TresBombBot1"
-        android:layout_width="117dp"
-        android:layout_height="72dp"
-        android:text="Toggle 1"
-        app:layout_constraintTop_toBottomOf="@id/TresBombImg1"
+        android:layout_width="133dp"
+        android:layout_height="73dp"
+        app:layout_constraintEnd_toEndOf="@id/TresBombImg1"
         app:layout_constraintStart_toStartOf="@id/TresBombImg1"
-        app:layout_constraintEnd_toEndOf="@id/TresBombImg1" />
+        app:layout_constraintTop_toBottomOf="@id/TresBombImg1" />
 
     <ToggleButton
         android:id="@+id/TresBombBot2"
-        android:layout_width="117dp"
-        android:layout_height="72dp"
-        android:text="Toggle 2"
-        app:layout_constraintTop_toBottomOf="@id/TresBombImg2"
+        android:layout_width="133dp"
+        android:layout_height="73dp"
+        app:layout_constraintEnd_toEndOf="@id/TresBombImg2"
         app:layout_constraintStart_toStartOf="@id/TresBombImg2"
-        app:layout_constraintEnd_toEndOf="@id/TresBombImg2" />
+        app:layout_constraintTop_toBottomOf="@id/TresBombImg2" />
 
     <!-- ToggleButton 3 -->
     <ToggleButton
         android:id="@+id/TresBombBot3"
-        android:layout_width="117dp"
-        android:layout_height="72dp"
-        android:text="Toggle 3"
-        app:layout_constraintTop_toBottomOf="@id/TresBombImg3"
+        android:layout_width="133dp"
+        android:layout_height="73dp"
+        app:layout_constraintEnd_toEndOf="@id/TresBombImg3"
         app:layout_constraintStart_toStartOf="@id/TresBombImg3"
-        app:layout_constraintEnd_toEndOf="@id/TresBombImg3" />
+        app:layout_constraintTop_toBottomOf="@id/TresBombImg3" />
 
     <CheckBox
         android:id="@+id/TresBombBox1"

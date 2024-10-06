@@ -16,9 +16,8 @@
         android:layout_height="107dp"
         android:text="@string/main_titulo"
         android:textColor="@color/main_yellow"
-        android:textSize="50dp"
+        android:textSize="50sp"
         android:textStyle="bold"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.117"
@@ -51,14 +50,14 @@
 
     <TextView
         android:id="@+id/MainContador"
-        android:layout_width="137dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="96dp"
+        android:layout_width="158dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="76dp"
         android:layout_marginBottom="108dp"
         android:text="@string/main_contador"
         android:textColor="@color/main_yellow"
+        android:textSize="25sp"
         android:textStyle="bold"
-        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/MainImage" />
 

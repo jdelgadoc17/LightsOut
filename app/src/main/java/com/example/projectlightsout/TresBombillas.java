@@ -124,13 +124,10 @@ public class TresBombillas extends AppCompatActivity {
         binding.TresBombBot1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                Log.i("dentro", "in");
                 if (isChecked) {
                     binding.TresBombImg1.setImageDrawable(bomb_on);
-                    Log.d("BOMBILLA_1", "Estado de Bombilla 1: " + isBomb1On);
                     isBomb1On = true;
                 } else {
-                    Log.d("BOMBILLA_1", "Estado de Bombilla 1: " + isBomb1On);
                     binding.TresBombImg1.setImageDrawable(bomb_off);
                     isBomb1On = false;
                 }
@@ -177,7 +174,7 @@ public class TresBombillas extends AppCompatActivity {
                     binding.TresBombBox2.setEnabled(false);
                     binding.TresBombBox3.setEnabled(false);
                     binding.TresBombChange.setEnabled(false);
-                    Toast.makeText(TresBombillas.this, "Botones desactivados", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TresBombillas.this, R.string.bot_activados, Toast.LENGTH_SHORT).show();
                 } else { // Activar todos los botones
                     binding.TresBombBot1.setEnabled(true);
                     binding.TresBombBot2.setEnabled(true);
@@ -186,7 +183,7 @@ public class TresBombillas extends AppCompatActivity {
                     binding.TresBombBox2.setEnabled(true);
                     binding.TresBombBox3.setEnabled(true);
                     binding.TresBombChange.setEnabled(true);
-                    Toast.makeText(TresBombillas.this, "Botones activados", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TresBombillas.this, R.string.bot_desactivados, Toast.LENGTH_SHORT).show();
                 }
             }
         });

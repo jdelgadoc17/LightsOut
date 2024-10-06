@@ -18,32 +18,32 @@
 
     <TextView
         android:id="@+id/DosBombillasTitulo"
-        android:layout_width="380dp"
+        android:layout_width="451dp"
         android:layout_height="95dp"
         android:text="@string/dos_bombillas_titulo"
-        android:textSize="50dp"
+        android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="346dp"
-        android:layout_height="158dp"
+        android:layout_width="367dp"
+        android:layout_height="154dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DosBombillasTitulo"
         app:layout_constraintVertical_bias="0.0">
 
         <ImageView
             android:id="@+id/DosBombImg1"
-            android:layout_width="112dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             tools:srcCompat="@tools:sample/avatars" />
@@ -58,11 +58,10 @@
 
     <ToggleButton
         android:id="@+id/DosBombBot1"
-        android:layout_width="117dp"
-        android:layout_height="72dp"
+        android:layout_width="133dp"
+        android:layout_height="73dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="60dp"
-        android:text="ToggleButton"
         app:layout_constraintEnd_toStartOf="@+id/DosBombBot2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,13 +69,12 @@
 
     <ToggleButton
         android:id="@+id/DosBombBot2"
-        android:layout_width="117dp"
-        android:layout_height="72dp"
+        android:layout_width="133dp"
+        android:layout_height="73dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="304dp"
         android:layout_marginBottom="68dp"
         android:checked="false"
-        android:text="ToggleButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"

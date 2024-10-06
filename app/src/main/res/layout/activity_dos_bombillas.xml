@@ -19,10 +19,10 @@
 
     <TextView
         android:id="@+id/DosBombillasTitulo"
-        android:layout_width="380dp"
+        android:layout_width="403dp"
         android:layout_height="95dp"
         android:text="@string/dos_bombillas_titulo"
-        android:textSize="50dp"
+        android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
@@ -37,14 +37,14 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintHorizontal_bias="0.753"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DosBombillasTitulo"
-        app:layout_constraintVertical_bias="0.059">
+        app:layout_constraintVertical_bias="0.117">
 
         <ImageView
             android:id="@+id/DosBombImg1"
-            android:layout_width="112dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             tools:srcCompat="@tools:sample/avatars" />
@@ -59,10 +59,9 @@
 
     <ToggleButton
         android:id="@+id/DosBombBot1"
-        android:layout_width="117dp"
-        android:layout_height="72dp"
+        android:layout_width="132dp"
+        android:layout_height="75dp"
         android:layout_marginStart="60dp"
-        android:text="ToggleButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
@@ -70,11 +69,10 @@
 
     <ToggleButton
         android:id="@+id/DosBombBot2"
-        android:layout_width="117dp"
-        android:layout_height="72dp"
+        android:layout_width="132dp"
+        android:layout_height="75dp"
         android:layout_marginStart="72dp"
         android:checked="false"
-        android:text="ToggleButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.088"

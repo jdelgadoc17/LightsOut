@@ -6,6 +6,8 @@
     <string name="bloquear">Bloquear</string>
     <string name="eleccion_3">3 bombillas elegidas</string>
     <string name="eleccion_2">2 bombillas elegidas</string>
+    <string name="bot_desactivados">Botones activados</string>
+    <string name="bot_activados">Botones desactivados</string>
 
 
 </resources>

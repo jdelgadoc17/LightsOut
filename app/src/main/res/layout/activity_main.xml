@@ -13,11 +13,11 @@
 
     <TextView
         android:id="@+id/MainTitle"
-        android:layout_width="244dp"
-        android:layout_height="124dp"
+        android:layout_width="286dp"
+        android:layout_height="138dp"
         android:text="@string/main_titulo"
         android:textColor="@color/main_yellow"
-        android:textSize="50dp"
+        android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,18 +53,17 @@
 
     <TextView
         android:id="@+id/MainContador"
-        android:layout_width="139dp"
+        android:layout_width="157dp"
         android:layout_height="72dp"
         android:text="@string/main_contador"
         android:textColor="@color/main_yellow"
-        android:textSize="25dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/MainSpinner"
         app:layout_constraintHorizontal_bias="0.923"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MainImage"
-        app:layout_constraintVertical_bias="0.402"
-        android:textStyle="bold"
-        />
+        app:layout_constraintVertical_bias="0.402" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

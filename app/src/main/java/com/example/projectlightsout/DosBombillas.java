@@ -135,7 +135,7 @@ public class DosBombillas extends AppCompatActivity {
                     binding.DosBombBox1.setEnabled(false);
                     binding.DosBombBox2.setEnabled(false);
                     binding.DosBombChange.setEnabled(false);
-                    Toast.makeText(DosBombillas.this, "Botones desactivados",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DosBombillas.this, R.string.bot_activados,Toast.LENGTH_SHORT).show();
 
                 }else{
                     binding.DosBombBot1.setEnabled(true);
@@ -143,7 +143,7 @@ public class DosBombillas extends AppCompatActivity {
                     binding.DosBombBox1.setEnabled(true);
                     binding.DosBombBox2.setEnabled(true);
                     binding.DosBombChange.setEnabled(true);
-                    Toast.makeText(DosBombillas.this, "Botones activados",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DosBombillas.this, R.string.bot_desactivados,Toast.LENGTH_SHORT).show();
 
                 }
 
