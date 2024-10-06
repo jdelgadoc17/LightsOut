@@ -13,8 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="196dp"
-        app:layout_constraintEnd_toStartOf="@+id/TresBombSwitch"
-        app:layout_constraintTop_toBottomOf="@+id/TresBombBot2" />
+        app:layout_constraintEnd_toStartOf="@+id/DosBombSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/DosBombBot2" />
 
     <TextView
         android:id="@+id/DosBombillasTitulo"
@@ -63,13 +63,13 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="60dp"
         android:text="ToggleButton"
-        app:layout_constraintEnd_toStartOf="@+id/TresBombBot2"
+        app:layout_constraintEnd_toStartOf="@+id/DosBombBot2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <ToggleButton
-        android:id="@+id/TresBombBot2"
+        android:id="@+id/DosBombBot2"
         android:layout_width="117dp"
         android:layout_height="72dp"
         android:layout_marginTop="16dp"
@@ -96,7 +96,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Switch
-        android:id="@+id/TresBombSwitch"
+        android:id="@+id/DosBombSwitch"
         android:layout_width="107dp"
         android:layout_height="35dp"
         android:layout_marginBottom="12dp"
@@ -107,7 +107,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/TresBombChange"
+        android:id="@+id/DosBombChange"
         android:layout_width="66dp"
         android:layout_height="55dp"
         android:layout_marginTop="96dp"

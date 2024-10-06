@@ -3,11 +3,13 @@ package com.example.projectlightsout;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
@@ -23,6 +25,29 @@ public class DosBombillas extends AppCompatActivity {
     boolean isBomb1On = false;
     boolean isBomb2On = false;
 
+    static final String BOMB1_STATE ="Estado de bombilla 1";
+    static final String BOMB2_STATE ="Estado de bombilla 2";
+    static final String BOT1_STATE ="Estado de boton 1";
+    static final String BOT2_STATE ="Estado de boton 2";
+    static final String CHECK1_STATE ="Estado de check 1";
+    static final String CHECK2_STATE ="Estado de check 2";
+    static final String LOCK_STATE ="Estado de bloqueo";
+
+
+    //SAVE STATE
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        savedInstanceState.putBoolean(BOMB1_STATE, isBomb1On);
+        savedInstanceState.putBoolean(BOMB2_STATE, isBomb2On);
+        savedInstanceState.putBoolean(BOT1_STATE, binding.DosBombBot1.isChecked());
+        savedInstanceState.putBoolean(BOT2_STATE, binding.DosBombBot2.isChecked());
+        savedInstanceState.putBoolean(CHECK1_STATE, binding.DosBombBox1.isChecked());
+        savedInstanceState.putBoolean(CHECK2_STATE, binding.DosBombBox2.isChecked());
+        savedInstanceState.putBoolean(LOCK_STATE, binding.DosBombSwitch.isChecked());
+
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,13 +58,40 @@ public class DosBombillas extends AppCompatActivity {
 
         Intent intent = getIntent();
 
+        //RECOVER STATE
+        if(savedInstanceState!=null){
+            isBomb1On = savedInstanceState.getBoolean(BOMB1_STATE, false);
+            isBomb1On = savedInstanceState.getBoolean(BOMB2_STATE, false);
 
+            if (isBomb1On) {
+                binding.DosBombImg1.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.encendido));
+            } else {
+                binding.DosBombImg1.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.apagado));
+            }
+
+            if (isBomb2On) {
+                binding.DosBombImg1.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.encendido));
+            } else {
+                binding.DosBombImg1.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.apagado));
+            }
+
+            binding.DosBombBox1.setChecked(savedInstanceState.getBoolean(CHECK1_STATE, false));
+            binding.DosBombBox1.setChecked(savedInstanceState.getBoolean(CHECK2_STATE, false));
+
+            boolean checkeado = savedInstanceState.getBoolean(LOCK_STATE, false);
+            binding.DosBombSwitch.setChecked(checkeado);
+
+            binding.DosBombBot1.setEnabled(!checkeado);
+            binding.DosBombBot2.setEnabled(!checkeado);
+            binding.DosBombBox1.setEnabled(!checkeado);
+            binding.DosBombBox2.setEnabled(!checkeado);
+            binding.DosBombChange.setEnabled(!checkeado);
+        }
 
 
         //SET IMAGES
         Drawable bomb_off = ContextCompat.getDrawable(this, R.drawable.apagado);
         Drawable bomb_on = ContextCompat.getDrawable(this, R.drawable.encendido);
-
         binding.DosBombImg1.setImageDrawable(bomb_off);
         binding.DosBombImg2.setImageDrawable(bomb_off);
 
@@ -57,7 +109,7 @@ public class DosBombillas extends AppCompatActivity {
             }
         });
 
-// TOGGLE 2
+        // TOGGLE 2
         binding.DosBombBot2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
@@ -72,22 +124,6 @@ public class DosBombillas extends AppCompatActivity {
         });
 
 
-
-        //CHECKBOX1
-        binding.DosBombBot1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-
-            }
-        });
-
-        //CHECKBOX1
-        binding.DosBombBot2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-
-            }
-        });
 
         //SWITCH
         binding.DosBombSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

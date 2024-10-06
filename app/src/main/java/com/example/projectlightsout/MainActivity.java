@@ -35,14 +35,17 @@ public class MainActivity extends AppCompatActivity {
         binding.MainSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String selected_item = (String) adapterView.getAdapter().getItem(i);
 
-                if(adapterView.getAdapter().getItem(i)!=""){
-                    if(adapterView.getAdapter().getItem(i)==spinner_valores[1]){
+                if(!selected_item.isEmpty()){
+                    if(selected_item.equals(spinner_valores[1])){
+
                         //PASAMOS A ACTIVITY 2 BOMBILLAS
                         Toast.makeText(MainActivity.this, getString(R.string.eleccion_2), Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(MainActivity.this, DosBombillas.class);
                         startActivity(intent);
-                    }else if(adapterView.getAdapter().getItem(i)==spinner_valores[2]){
+
+                    }else if(selected_item.equals(spinner_valores[2])){
                         //PASAMOS A ACTIVITY 3 BOMBILLAS
 
                         Toast.makeText(MainActivity.this, getString(R.string.eleccion_3), Toast.LENGTH_SHORT).show();
