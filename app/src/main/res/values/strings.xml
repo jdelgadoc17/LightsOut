@@ -8,6 +8,9 @@
     <string name="eleccion_2">2 bombillas elegidas</string>
     <string name="bot_desactivados">Botones activados</string>
     <string name="bot_activados">Botones desactivados</string>
+    <string name="apagado">APAGADO</string>
+    <string name="encendido">ENCENDIDO</string>
+
 
 
 </resources>

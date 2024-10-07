@@ -155,26 +155,32 @@ public class DosBombillas extends AppCompatActivity {
         binding.DosBombChange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(binding.DosBombBox1.isChecked()){
-                    if(isBomb1On){
+                if (binding.DosBombBox1.isChecked()) {
+                    if (isBomb1On) {
                         binding.DosBombImg1.setImageDrawable(bomb_off);
+                        binding.DosBombBot1.setText(R.string.apagado);
                         isBomb1On = false;
                     } else {
                         binding.DosBombImg1.setImageDrawable(bomb_on);
+                        binding.DosBombBot1.setText(R.string.encendido);
                         isBomb1On = true;
                     }
                 }
-                if(binding.DosBombBox2.isChecked()){
-                    if(isBomb2On){
+
+                if (binding.DosBombBox2.isChecked()) {
+                    if (isBomb2On) {
                         binding.DosBombImg2.setImageDrawable(bomb_off);
+                        binding.DosBombBot2.setText(R.string.apagado);
                         isBomb2On = false;
                     } else {
                         binding.DosBombImg2.setImageDrawable(bomb_on);
+                        binding.DosBombBot2.setText(R.string.encendido);
                         isBomb2On = true;
                     }
                 }
             }
         });
+
 
 
     }//ONCREATE END

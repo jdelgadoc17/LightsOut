@@ -196,8 +196,12 @@ public class TresBombillas extends AppCompatActivity {
                     if (isBomb1On) {
                         binding.TresBombImg1.setImageDrawable(bomb_off);
                         isBomb1On = false;
+                        binding.TresBombBot1.setText(R.string.apagado);
+
                     } else {
                         binding.TresBombImg1.setImageDrawable(bomb_on);
+                        binding.TresBombBot1.setText(R.string.encendido);
+
                         isBomb1On = true;
                     }
                 }
@@ -205,17 +209,25 @@ public class TresBombillas extends AppCompatActivity {
                     if (isBomb2On) {
                         binding.TresBombImg2.setImageDrawable(bomb_off);
                         isBomb2On = false;
+                        binding.TresBombBot2.setText(R.string.apagado);
+
                     } else {
                         binding.TresBombImg2.setImageDrawable(bomb_on);
+                        binding.TresBombBot2.setText(R.string.encendido);
+
                         isBomb2On = true;
                     }
                 }
                 if (binding.TresBombBox3.isChecked()) {
                     if (isBomb3On) {
                         binding.TresBombImg3.setImageDrawable(bomb_off);
+                        binding.TresBombBot3.setText(R.string.apagado);
+
                         isBomb3On = false;
                     } else {
                         binding.TresBombImg3.setImageDrawable(bomb_on);
+                        binding.TresBombBot3.setText(R.string.encendido);
+
                         isBomb3On = true;
                     }
                 }

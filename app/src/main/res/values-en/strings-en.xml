@@ -10,4 +10,6 @@
     <string name="eleccion_2">2 bulbs selected</string>
     <string name="bot_desactivados">Buttons enabled</string>
     <string name="bot_activados">Buttons disabled</string>
+    <string name="apagado">OFF</string>
+    <string name="encendido">ON</string>
 </resources>
