@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Toast;
@@ -34,19 +35,7 @@ public class DosBombillas extends AppCompatActivity {
     static final String LOCK_STATE ="Estado de bloqueo";
 
 
-    //SAVE STATE
-    @Override
-    public void onSaveInstanceState(Bundle savedInstanceState) {
-        savedInstanceState.putBoolean(BOMB1_STATE, isBomb1On);
-        savedInstanceState.putBoolean(BOMB2_STATE, isBomb2On);
-        savedInstanceState.putBoolean(BOT1_STATE, binding.DosBombBot1.isChecked());
-        savedInstanceState.putBoolean(BOT2_STATE, binding.DosBombBot2.isChecked());
-        savedInstanceState.putBoolean(CHECK1_STATE, binding.DosBombBox1.isChecked());
-        savedInstanceState.putBoolean(CHECK2_STATE, binding.DosBombBox2.isChecked());
-        savedInstanceState.putBoolean(LOCK_STATE, binding.DosBombSwitch.isChecked());
 
-        super.onSaveInstanceState(savedInstanceState);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -157,25 +146,25 @@ public class DosBombillas extends AppCompatActivity {
             public void onClick(View view) {
                 if (binding.DosBombBox1.isChecked()) {
                     if (isBomb1On) {
+                        isBomb1On = false;
                         binding.DosBombImg1.setImageDrawable(bomb_off);
                         binding.DosBombBot1.setText(R.string.apagado);
-                        isBomb1On = false;
                     } else {
+                        isBomb1On = true;
                         binding.DosBombImg1.setImageDrawable(bomb_on);
                         binding.DosBombBot1.setText(R.string.encendido);
-                        isBomb1On = true;
                     }
                 }
 
                 if (binding.DosBombBox2.isChecked()) {
                     if (isBomb2On) {
+                        isBomb2On = false;
                         binding.DosBombImg2.setImageDrawable(bomb_off);
                         binding.DosBombBot2.setText(R.string.apagado);
-                        isBomb2On = false;
                     } else {
+                        isBomb2On = true;
                         binding.DosBombImg2.setImageDrawable(bomb_on);
                         binding.DosBombBot2.setText(R.string.encendido);
-                        isBomb2On = true;
                     }
                 }
             }
