@@ -60,8 +60,8 @@ public class DosBombillas extends AppCompatActivity {
 
         //RECOVER STATE
         if(savedInstanceState!=null){
-            isBomb1On = savedInstanceState.getBoolean(BOMB1_STATE, false);
-            isBomb2On = savedInstanceState.getBoolean(BOMB2_STATE, false);
+            isBomb1On = savedInstanceState.getBoolean(BOMB1_STATE);
+            isBomb2On = savedInstanceState.getBoolean(BOMB2_STATE);
 
             if (isBomb1On) {
                 binding.DosBombImg1.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.encendido));
