@@ -47,10 +47,15 @@ public class DosBombillas extends AppCompatActivity {
 
         Intent intent = getIntent();
 
+
         //RECOVER STATE
         if(savedInstanceState!=null){
             isBomb1On = savedInstanceState.getBoolean(BOMB1_STATE);
             isBomb2On = savedInstanceState.getBoolean(BOMB2_STATE);
+
+            binding.DosBombBot1.setChecked(isBomb1On);
+            binding.DosBombBot2.setChecked(isBomb2On);
+
 
             if (isBomb1On) {
                 binding.DosBombImg1.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.encendido));
@@ -140,35 +145,38 @@ public class DosBombillas extends AppCompatActivity {
             }
         });
 
-        //CHANGE
+
         binding.DosBombChange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Cambio en bombilla 1
                 if (binding.DosBombBox1.isChecked()) {
-                    if (isBomb1On) {
-                        isBomb1On = false;
+                    if (binding.DosBombBot1.isChecked()) {
+                        binding.DosBombBot1.setChecked(false);
                         binding.DosBombImg1.setImageDrawable(bomb_off);
                         binding.DosBombBot1.setText(R.string.apagado);
                     } else {
-                        isBomb1On = true;
+                        binding.DosBombBot1.setChecked(true);
                         binding.DosBombImg1.setImageDrawable(bomb_on);
                         binding.DosBombBot1.setText(R.string.encendido);
                     }
                 }
 
+                // Cambio en bombilla 2
                 if (binding.DosBombBox2.isChecked()) {
-                    if (isBomb2On) {
-                        isBomb2On = false;
+                    if (binding.DosBombBot2.isChecked()) {
+                        binding.DosBombBot2.setChecked(false);
                         binding.DosBombImg2.setImageDrawable(bomb_off);
                         binding.DosBombBot2.setText(R.string.apagado);
                     } else {
-                        isBomb2On = true;
+                        binding.DosBombBot2.setChecked(true);
                         binding.DosBombImg2.setImageDrawable(bomb_on);
                         binding.DosBombBot2.setText(R.string.encendido);
                     }
                 }
             }
         });
+
 
 
 

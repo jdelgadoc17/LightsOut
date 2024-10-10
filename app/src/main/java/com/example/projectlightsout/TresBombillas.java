@@ -192,47 +192,47 @@ public class TresBombillas extends AppCompatActivity {
         binding.TresBombChange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Cambio en bombilla 1
                 if (binding.TresBombBox1.isChecked()) {
-                    if (isBomb1On) {
+                    if (binding.TresBombBot1.isChecked()) {
+                        binding.TresBombBot1.setChecked(false);
                         binding.TresBombImg1.setImageDrawable(bomb_off);
-                        isBomb1On = false;
                         binding.TresBombBot1.setText(R.string.apagado);
-
                     } else {
+                        binding.TresBombBot1.setChecked(true);
                         binding.TresBombImg1.setImageDrawable(bomb_on);
                         binding.TresBombBot1.setText(R.string.encendido);
-
-                        isBomb1On = true;
                     }
                 }
-                if (binding.TresBombBox2.isChecked()) {
-                    if (isBomb2On) {
-                        binding.TresBombImg2.setImageDrawable(bomb_off);
-                        isBomb2On = false;
-                        binding.TresBombBot2.setText(R.string.apagado);
 
+                // Cambio en bombilla 2
+                if (binding.TresBombBox2.isChecked()) {
+                    if (binding.TresBombBot2.isChecked()) {
+                        binding.TresBombBot2.setChecked(false);
+                        binding.TresBombImg2.setImageDrawable(bomb_off);
+                        binding.TresBombBot2.setText(R.string.apagado);
                     } else {
+                        binding.TresBombBot2.setChecked(true);
                         binding.TresBombImg2.setImageDrawable(bomb_on);
                         binding.TresBombBot2.setText(R.string.encendido);
-
-                        isBomb2On = true;
                     }
                 }
+
+                // Cambio en bombilla 3
                 if (binding.TresBombBox3.isChecked()) {
-                    if (isBomb3On) {
+                    if (binding.TresBombBot3.isChecked()) {
+                        binding.TresBombBot3.setChecked(false);
                         binding.TresBombImg3.setImageDrawable(bomb_off);
                         binding.TresBombBot3.setText(R.string.apagado);
-
-                        isBomb3On = false;
                     } else {
+                        binding.TresBombBot3.setChecked(true);
                         binding.TresBombImg3.setImageDrawable(bomb_on);
                         binding.TresBombBot3.setText(R.string.encendido);
-
-                        isBomb3On = true;
                     }
                 }
             }
         });
+
 
 
     }//ONCREATE END
