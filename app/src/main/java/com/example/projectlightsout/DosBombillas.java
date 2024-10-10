@@ -61,7 +61,7 @@ public class DosBombillas extends AppCompatActivity {
         //RECOVER STATE
         if(savedInstanceState!=null){
             isBomb1On = savedInstanceState.getBoolean(BOMB1_STATE, false);
-            isBomb1On = savedInstanceState.getBoolean(BOMB2_STATE, false);
+            isBomb2On = savedInstanceState.getBoolean(BOMB2_STATE, false);
 
             if (isBomb1On) {
                 binding.DosBombImg1.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.encendido));
@@ -70,13 +70,13 @@ public class DosBombillas extends AppCompatActivity {
             }
 
             if (isBomb2On) {
-                binding.DosBombImg1.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.encendido));
+                binding.DosBombImg2.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.encendido));
             } else {
-                binding.DosBombImg1.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.apagado));
+                binding.DosBombImg2.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.apagado));
             }
 
             binding.DosBombBox1.setChecked(savedInstanceState.getBoolean(CHECK1_STATE, false));
-            binding.DosBombBox1.setChecked(savedInstanceState.getBoolean(CHECK2_STATE, false));
+            binding.DosBombBox2.setChecked(savedInstanceState.getBoolean(CHECK2_STATE, false));
 
             boolean checkeado = savedInstanceState.getBoolean(LOCK_STATE, false);
             binding.DosBombSwitch.setChecked(checkeado);
